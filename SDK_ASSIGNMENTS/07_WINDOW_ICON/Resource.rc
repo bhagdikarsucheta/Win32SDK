@@ -1,0 +1,8 @@
+#include "resource.h"
+
+MY_ICON ICON "icon-developer-icon.ico"    
+MY_CURSOR ICON "08-saturn-icon.cur"     
+
+
+
+

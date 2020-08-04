@@ -1,0 +1,74 @@
+#include<windows.h>
+#include"myDialog.h"
+////////////////////////////////////////////////////////////////////////// Splash Screen
+IDB_BITMAP_SPLASH BITMAP DialogImg.bmp
+
+///////////////////////////////////////////////////////////////////////////// Dialog Box
+DATAENTRY DIALOG DISCARDABLE 0, 0, 1920, 1080
+STYLE DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_BORDER | WS_VISIBLE
+CAPTION "DATAENTRY"
+
+//////////////////////////////////////////////////////////////////////////////////// Boyle's Law Controls//////////////////////
+BEGIN
+			LTEXT "Number of Moles Of Gas: ", -1,80,80,120,30
+			COMBOBOX ID_NUMGASMOLESB, 170, 80, 80, 10,WS_TABSTOP
+
+			LTEXT "Increment/Decrement By: ", -1, 80, 115, 120, 30
+			COMBOBOX ID_INCDECB, 170, 115, 80, 10, WS_TABSTOP
+
+			LTEXT "Temprature: ", -1, 120, 145, 120, 30
+			COMBOBOX ID_TEMPB, 170, 145, 80, 10, WS_TABSTOP
+
+			LTEXT "Pressure: ", -1, 130, 175, 120, 30
+			COMBOBOX ID_PRESSUREB, 170, 175, 80, 10, WS_TABSTOP
+
+			PUSHBUTTON " + ", ID_PRESSUREPLUSB, 130, 210, 40, 20
+			PUSHBUTTON " - ", ID_PRESSUREMINUSB, 200, 210, 40, 20
+
+			LTEXT "Volume: ", -1, 130, 260, 120, 30
+			COMBOBOX ID_VOLUMEB, 170, 260, 80, 10, WS_TABSTOP
+
+			PUSHBUTTON " + ", ID_VPLUSB, 130, 290, 40, 20
+			PUSHBUTTON " - ", ID_VMINUSB, 200, 290, 40, 20
+
+			PUSHBUTTON " SAVE TO FILE ", ID_FILEB, 130, 340, 70, 20
+			PUSHBUTTON " RESET ", ID_RESETB, 210, 340, 70, 20
+
+
+			AUTORADIOBUTTON ": Bolyle's Law", RB_BOYLES 150, 40, 70, 10, WS_TABSTOP | WS_GROUP
+
+			AUTORADIOBUTTON ": Charle's Law", RB_CHARLES 550, 40, 70, 10
+
+
+			/////////////////////////////////////////////////////////////////////////Charle's Law Controls//////////////////////////
+
+
+			LTEXT "Number of Moles Of Gas: ", -1, 480, 80, 120, 30
+			COMBOBOX ID_NUMGASMOLESC, 570, 80, 80, 10, WS_TABSTOP
+
+			LTEXT "Increment/Decrement By: ", -1, 480, 115, 120, 30
+			COMBOBOX ID_INCDECC, 570, 115, 80, 10, WS_TABSTOP
+
+			LTEXT "Pressure: ", -1, 530, 145, 120, 30
+			COMBOBOX ID_PRESSUREC, 570, 145, 80, 10, WS_TABSTOP
+
+
+			LTEXT "Volume: ", -1, 535, 175, 120, 30
+			COMBOBOX ID_VOLUMEC, 570, 175, 80, 10, WS_TABSTOP
+
+			PUSHBUTTON " + ", ID_VPLUSC, 550, 210, 40, 20
+			PUSHBUTTON " - ", ID_VMINUSC, 620, 210, 40, 20
+
+			LTEXT "Temprature: ", -1, 530, 260, 120, 30
+			COMBOBOX ID_TEMPC, 570, 260, 80, 10, WS_TABSTOP
+			//
+			PUSHBUTTON " + ", ID_TPLUSC, 550, 290, 40, 20
+			PUSHBUTTON " - ", ID_TMINUSC, 620, 290, 40, 20
+
+			PUSHBUTTON " SAVE TO FILE ", ID_FILEC, 510, 340, 70, 20
+			PUSHBUTTON " RESET ", ID_RESETC, 600, 340, 70, 20
+			GROUPBOX	"Boyle's Law", ID_GROUPBOX1, 58, 57, 258, 274, WS_GROUP
+			GROUPBOX    "Charle's Law", ID_GROUPBOX2, 450, 57, 258, 274
+
+END
+

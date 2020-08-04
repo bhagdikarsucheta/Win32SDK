@@ -1,0 +1,15 @@
+#include<windows.h>
+#include"Thank.h"
+
+
+
+ThankYou DIALOG DISCARDABLE 0, 0, 200, 70
+STYLE DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_BORDER | DS_SETFONT | WS_VISIBLE
+CAPTION "ThankYou"
+
+BEGIN
+PUSHBUTTON"OK", ID_OK3 80,30,25,10
+LTEXT "Thank You!!   Visit Again", -1, 70, 10, 64, 10
+END
+
+
